@@ -1,12 +1,14 @@
+exports.min = function min(a) {
+    if (!a || a.length === 0) return 0;
+    return Math.min(...a);
+};
 
-exports.min = function min (array) {
-  return 0;
-}
+exports.max = function max(a) {
+    if (!a || a.length === 0) return 0;
+    return Math.max(...a);
+};
 
-exports.max = function max (array) {
-  return 0;
-}
-
-exports.avg = function avg (array) {
-  return 0;
-}
+exports.avg = function avg(a) {
+    if (!a || a.length === 0) return 0;
+    return a.reduce((pre, cur) => pre + cur, 0) / a.length;
+};
